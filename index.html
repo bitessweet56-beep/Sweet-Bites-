@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesome 6.5.1 (versión estable) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* ===== VARIABLES DE MARCA (Según CMI) ===== */
         :root {
@@ -72,10 +72,6 @@
             font-weight: 400;
         }
 
-        .merriweather {
-            font-family: 'Merriweather', serif;
-        }
-
         a {
             text-decoration: none;
             color: inherit;
@@ -111,6 +107,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            position: relative;
         }
 
         .logo {
@@ -175,6 +172,7 @@
             font-family: 'DM Sans', sans-serif;
             border: 2px solid var(--dorado);
             transition: var(--transicion);
+            display: inline-block;
         }
 
         .btn-pedido:hover {
@@ -224,6 +222,10 @@
             line-height: 1.2;
             color: var(--rojo-oscuro);
             margin-bottom: 1.5rem;
+        }
+
+        .hero-text h2::after {
+            display: none;
         }
 
         .hero-text h2 span {
@@ -287,7 +289,7 @@
 
         .hero-image img {
             max-width: 400px;
-            border-radius: 30px 30px 30px 30px;
+            border-radius: 30px;
             box-shadow: var(--sombra-fuerte);
             border: 5px solid var(--blanco);
             transform: rotate(2deg);
@@ -390,6 +392,7 @@
             cursor: pointer;
             transition: var(--transicion);
             font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
         }
 
         .btn-producto:hover {
@@ -468,7 +471,7 @@
             margin-right: 10px;
         }
 
-        /* ===== SECCIÓN NOSOTROS / VALORES ===== */
+        /* ===== SECCIÓN NOSOTROS ===== */
         .nosotros {
             padding: 5rem 0;
             background-color: var(--beige);
@@ -524,7 +527,7 @@
             border: 5px solid var(--blanco);
         }
 
-        /* ===== SECCIÓN CONTACTO / PEDIDO ===== */
+        /* ===== SECCIÓN CONTACTO ===== */
         .contacto {
             padding: 5rem 0;
             background-color: var(--blanco);
@@ -661,6 +664,7 @@
             color: rgba(245, 229, 210, 0.8);
             font-size: 0.95rem;
             line-height: 1.8;
+            display: block;
         }
 
         .footer-col a:hover {
@@ -707,16 +711,10 @@
                 gap: 1rem;
             }
 
-            nav ul {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
             .menu-toggle {
                 display: block;
                 position: absolute;
-                top: 1.5rem;
+                top: 1rem;
                 right: 1.5rem;
             }
 
@@ -733,6 +731,7 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 1rem 0;
+                gap: 1rem;
             }
 
             .hero-text h2 {
@@ -749,6 +748,10 @@
 
             .hero-image img {
                 max-width: 280px;
+            }
+
+            .btn-pedido {
+                margin-top: 0.5rem;
             }
         }
 
@@ -811,7 +814,6 @@
                 </div>
             </div>
             <div class="hero-image">
-                <!-- Usando un placeholder de imagen. Reemplazar con foto real del producto -->
                 <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fresas con crema Sweet Bites">
             </div>
         </div>
@@ -825,31 +827,27 @@
                 <p>Hechos al momento con fresa real y ingredientes frescos</p>
             </div>
             <div class="productos-grid">
-                <!-- Producto 1 -->
                 <div class="producto-card">
                     <div class="producto-icon"><i class="fas fa-strawberry"></i></div>
                     <h3>Fresas con Crema</h3>
                     <p>Fresas frescas seleccionadas con nuestra crema artesanal batida al momento.</p>
-                    <div class="precio">Q35.00</div>
+                    <div class="precio">Q30.00</div>
                     <button class="btn-producto" onclick="pedirProducto('Fresas con Crema')">Pedir</button>
                 </div>
-                <!-- Producto 2 -->
                 <div class="producto-card">
-                    <div class="producto-icon"><i class="fas fa-pancakes"></i></div>
+                    <div class="producto-icon"><i class="fas fa-cookie-bite"></i></div>
                     <h3>Mini Panqueques</h3>
                     <p>Suaves mini panqueques horneados artesanalmente, ideales para compartir.</p>
-                    <div class="precio">Q30.00</div>
+                    <div class="precio">Q25.00</div>
                     <button class="btn-producto" onclick="pedirProducto('Mini Panqueques')">Pedir</button>
                 </div>
-                <!-- Producto 3 -->
                 <div class="producto-card">
-                    <div class="producto-icon"><i class="fas fa-waffle"></i></div>
+                    <div class="producto-icon"><i class="fas fa-birthday-cake"></i></div>
                     <h3>Waffles</h3>
                     <p>Waffles crujientes con la opción de agregar fresas, crema y toppings.</p>
-                    <div class="precio">Q40.00</div>
+                    <div class="precio">Q30.00</div>
                     <button class="btn-producto" onclick="pedirProducto('Waffles')">Pedir</button>
                 </div>
-                <!-- Producto 4 -->
                 <div class="producto-card">
                     <div class="producto-icon"><i class="fas fa-utensils"></i></div>
                     <h3>Brochetas de Mini Panqueques</h3>
@@ -857,7 +855,6 @@
                     <div class="precio">Q45.00</div>
                     <button class="btn-producto" onclick="pedirProducto('Brochetas de Mini Panqueques')">Pedir</button>
                 </div>
-                <!-- Producto 5 -->
                 <div class="producto-card">
                     <div class="producto-icon"><i class="fas fa-bacon"></i></div>
                     <h3>Brochetas de Waffles</h3>
@@ -865,9 +862,8 @@
                     <div class="precio">Q50.00</div>
                     <button class="btn-producto" onclick="pedirProducto('Brochetas de Waffles')">Pedir</button>
                 </div>
-                <!-- Producto 6 -->
                 <div class="producto-card">
-                    <div class="producto-icon"><i class="fas fa-birthday-cake"></i></div>
+                    <div class="producto-icon"><i class="fas fa-gift"></i></div>
                     <h3>Combos Especiales</h3>
                     <p>Combina tus postres favoritos y ahorra. Perfecto para celebraciones.</p>
                     <div class="precio">Desde Q75.00</div>
@@ -942,14 +938,13 @@
                     <p>Nacimos en Quetzaltenango con la misión de endulzar tus momentos especiales. Nos diferenciamos por usar <strong>fruta real, preparación artesanal al momento y presentaciones creativas</strong> como nuestras brochetas.</p>
                     <p>Creemos que hasta el antojo más pequeño merece convertirse en un recuerdo feliz. Por eso cuidamos cada detalle: desde la selección de ingredientes frescos hasta la entrega puntual y el trato cercano.</p>
                     <ul class="valores-list">
-                        <li><i class="fas fa-leaf"></i> <strong>Frescura garantizada:</strong> Preparamos bajo pedido para evitar desperdicio.</li>
-                        <li><i class="fas fa-hand-holding-heart"></i> <strong>Responsabilidad social:</strong> Apoyamos a productores locales de Quetzaltenango.</li>
-                        <li><i class="fas fa-shield-alt"></i> <strong>Higiene y transparencia:</strong> Mostramos nuestro proceso y ingredientes reales.</li>
-                        <li><i class="fas fa-clock"></i> <strong>Puntualidad:</strong> Valoramos tu tiempo, cumplimos con las entregas.</li>
+                        <li><i class="fas fa-leaf"></i> <span><strong>Frescura garantizada:</strong> Preparamos bajo pedido para evitar desperdicio.</span></li>
+                        <li><i class="fas fa-hand-holding-heart"></i> <span><strong>Responsabilidad social:</strong> Apoyamos a productores locales de Quetzaltenango.</span></li>
+                        <li><i class="fas fa-shield-alt"></i> <span><strong>Higiene y transparencia:</strong> Mostramos nuestro proceso y ingredientes reales.</span></li>
+                        <li><i class="fas fa-clock"></i> <span><strong>Puntualidad:</strong> Valoramos tu tiempo, cumplimos con las entregas.</span></li>
                     </ul>
                 </div>
                 <div class="nosotros-image">
-                    <!-- Placeholder de imagen. Reemplazar con foto del equipo o producto -->
                     <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipo Sweet Bites">
                 </div>
             </div>
@@ -972,16 +967,19 @@
                     <p><i class="fas fa-clock"></i> Lunes a Domingo: 10:00 - 20:00</p>
                     <p><i class="fas fa-truck"></i> Servicio a domicilio y para eventos</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/share/1ErtqsGVip/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/sweetbites.dulce?stkn=MW45bDluaTJmZ3YwNg==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="tiktok.com/@sweet_bite021" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/share/1ErtqsGVip/" target="_blank" rel="noopener" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sweetbites.dulce/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@sweet_bite021" target="_blank" rel="noopener" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="contacto-form">
                     <h3>Formulario de Pedido</h3>
                     <form id="pedidoForm" onsubmit="enviarPedido(event)">
                         <div class="form-group">
-                            <label for="nombre">Nombre completo</label>
-                            <input type="text" id="nombre" placeholder="Tu nombre" required>
-                        </div>
-                        <div class="
+                            <label for="nombre">Nombre completo</
