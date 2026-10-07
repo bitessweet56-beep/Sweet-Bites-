@@ -78,6 +78,7 @@
             gap: 1rem;
         }
 
+        /* ===== LOGO EN HEADER ===== */
         .logo { display: flex; align-items: center; }
 
         .logo-imagen {
@@ -177,6 +178,19 @@
             box-shadow: var(--sombra-fuerte);
         }
 
+        .hero-image { flex: 1 1 350px; display: flex; justify-content: center; }
+
+        .hero-image img {
+            max-width: 400px;
+            border-radius: 30px;
+            box-shadow: var(--sombra-fuerte);
+            border: 5px solid var(--blanco);
+            transform: rotate(2deg);
+            transition: var(--transicion);
+        }
+
+        .hero-image img:hover { transform: rotate(0deg) scale(1.02); }
+
         /* ===== PRODUCTOS ===== */
         .productos { padding: 5rem 0; background-color: var(--blanco); }
         .section-title { text-align: center; margin-bottom: 3rem; }
@@ -271,25 +285,81 @@
         .valores-list li { margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 10px; }
         .valores-list li i { color: var(--dorado); font-size: 1.3rem; margin-top: 3px; }
 
-        /* ===== CONTACTO (SIN FORMULARIO) ===== */
+        .nosotros-image { flex: 1 1 350px; text-align: center; }
+        .nosotros-image img {
+            max-width: 350px;
+            border-radius: 30px;
+            box-shadow: var(--sombra-fuerte);
+            border: 5px solid var(--blanco);
+        }
+
+        /* ===== CONTACTO ===== */
         .contacto { padding: 5rem 0; background-color: var(--blanco); }
+        .contacto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
 
         .contacto-info {
             background-color: var(--beige);
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 20px;
             box-shadow: var(--sombra-suave);
             border-left: 8px solid var(--rojo-oscuro);
-            max-width: 700px;
-            margin: 0 auto;
         }
 
-        .contacto-info h3 { color: var(--rojo-oscuro); font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; }
-        .contacto-info p { margin-bottom: 1rem; display: flex; align-items: center; gap: 12px; font-size: 1.1rem; }
+        .contacto-info h3 { color: var(--rojo-oscuro); font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .contacto-info p { margin-bottom: 1rem; display: flex; align-items: center; gap: 12px; }
         .contacto-info p i { color: var(--dorado); font-size: 1.3rem; width: 25px; }
         .contacto-info p a:hover { color: var(--dorado); }
 
-        .contacto-info .social-icons { justify-content: center; margin-top: 1.5rem; }
+        .contacto-form {
+            background-color: var(--beige);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--sombra-suave);
+            border-right: 8px solid var(--dorado);
+        }
+
+        .contacto-form h3 { color: var(--rojo-oscuro); font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-weight: 600; color: var(--rojo-oscuro); margin-bottom: 0.3rem; font-size: 0.95rem; }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            background-color: var(--blanco);
+            transition: var(--transicion);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--dorado);
+            box-shadow: 0 0 0 3px rgba(191, 146, 81, 0.2);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 100px; }
+
+        .btn-enviar {
+            background-color: var(--rojo-oscuro);
+            color: var(--beige);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transicion);
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .btn-enviar:hover { background-color: var(--dorado); color: var(--rojo-oscuro); transform: translateY(-3px); box-shadow: var(--sombra-fuerte); }
 
         /* ===== REDES SOCIALES ===== */
         .social-icons { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
@@ -326,6 +396,7 @@
             margin-bottom: 2rem;
         }
 
+        /* ===== LOGO EN FOOTER ===== */
         .footer-logo {
             width: 110px;
             height: 110px;
@@ -390,6 +461,7 @@
             .hero-text h2 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
             .hero-buttons { justify-content: center; }
+            .hero-image img { max-width: 280px; }
             .logo-imagen { width: 80px; height: 80px; }
         }
 
@@ -435,6 +507,9 @@
                     <a href="#productos" class="btn-primary"><i class="fas fa-ice-cream"></i> Ver productos</a>
                     <a href="https://wa.me/50258169879?text=Hola%20Sweet%20Bites,%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-whatsapp"></i> Hacer pedido</a>
                 </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fresas con crema Sweet Bites">
             </div>
         </div>
     </section>
@@ -564,63 +639,26 @@
                         <li><i class="fas fa-clock"></i> <strong>Puntualidad:</strong> Valoramos tu tiempo, cumplimos con las entregas.</li>
                     </ul>
                 </div>
+                <div class="nosotros-image">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipo Sweet Bites">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACTO (SIN FORMULARIO) ===== -->
+    <!-- ===== CONTACTO ===== -->
     <section class="contacto" id="contacto">
         <div class="container">
             <div class="section-title">
-                <h2>Contáctanos</h2>
+                <h2>Haz tu Pedido</h2>
                 <p>Estamos listos para endulzar tu día</p>
             </div>
-            <div class="contacto-info">
-                <h3>Información de Contacto</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Quetzaltenango, Guatemala</p>
-                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/50258169879" target="_blank" rel="noopener">+502 5816 9879</a></p>
-                <p><i class="fas fa-phone"></i> <a href="tel:55706564">5570 6564</a></p>
-                <p><i class="fas fa-envelope"></i> pedidos@sweetbites.com</p>
-                <p><i class="fas fa-clock"></i> Lunes a Domingo: 10:00 - 20:00</p>
-                <p><i class="fas fa-truck"></i> Servicio a domicilio y para eventos</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/share/1ErtqsGVip/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://tiktok.com/@sweet_bite021" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://wa.me/50258169879" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <img src="logo.png" alt="Sweet Bites" class="footer-logo">
-                    <p>Endulzando tus momentos especiales con postres frescos y artesanales en Quetzaltenango, Guatemala.</p>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Enlaces Rápidos</h4>
-                    <p><a href="#inicio">Inicio</a></p>
-                    <p><a href="#productos">Productos</a></p>
-                    <p><a href="#promociones">Promociones</a></p>
-                    <p><a href="#nosotros">Nosotros</a></p>
-                    <p><a href="#contacto">Contacto</a></p>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Contacto</h4>
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <h3>Información de Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Quetzaltenango, Guatemala</p>
                     <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/50258169879" target="_blank" rel="noopener">+502 5816 9879</a></p>
                     <p><i class="fas fa-phone"></i> <a href="tel:55706564">5570 6564</a></p>
                     <p><i class="fas fa-envelope"></i> pedidos@sweetbites.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Quetzaltenango, GT</p>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Síguenos</h4>
-                    <p>Descubre nuestras novedades y promociones en redes sociales.</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/share/1ErtqsGVip/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://tiktok.com/@sweet_bite021" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tikt
+                    <p><i class="fas fa-clock"></i> Lunes a Domingo: 10:00 - 20:00</p>
+                    <p><i class="fas fa-truck"></i> Serv
