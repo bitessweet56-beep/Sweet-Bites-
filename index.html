@@ -178,19 +178,6 @@
             box-shadow: var(--sombra-fuerte);
         }
 
-        .hero-image { flex: 1 1 350px; display: flex; justify-content: center; }
-
-        .hero-image img {
-            max-width: 400px;
-            border-radius: 30px;
-            box-shadow: var(--sombra-fuerte);
-            border: 5px solid var(--blanco);
-            transform: rotate(2deg);
-            transition: var(--transicion);
-        }
-
-        .hero-image img:hover { transform: rotate(0deg) scale(1.02); }
-
         /* ===== PRODUCTOS ===== */
         .productos { padding: 5rem 0; background-color: var(--blanco); }
         .section-title { text-align: center; margin-bottom: 3rem; }
@@ -284,14 +271,6 @@
         .valores-list { list-style: none; }
         .valores-list li { margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 10px; }
         .valores-list li i { color: var(--dorado); font-size: 1.3rem; margin-top: 3px; }
-
-        .nosotros-image { flex: 1 1 350px; text-align: center; }
-        .nosotros-image img {
-            max-width: 350px;
-            border-radius: 30px;
-            box-shadow: var(--sombra-fuerte);
-            border: 5px solid var(--blanco);
-        }
 
         /* ===== CONTACTO ===== */
         .contacto { padding: 5rem 0; background-color: var(--blanco); }
@@ -461,7 +440,6 @@
             .hero-text h2 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
             .hero-buttons { justify-content: center; }
-            .hero-image img { max-width: 280px; }
             .logo-imagen { width: 80px; height: 80px; }
         }
 
@@ -507,9 +485,6 @@
                     <a href="#productos" class="btn-primary"><i class="fas fa-ice-cream"></i> Ver productos</a>
                     <a href="https://wa.me/50258169879?text=Hola%20Sweet%20Bites,%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-whatsapp"></i> Hacer pedido</a>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fresas con crema Sweet Bites">
             </div>
         </div>
     </section>
@@ -639,9 +614,6 @@
                         <li><i class="fas fa-clock"></i> <strong>Puntualidad:</strong> Valoramos tu tiempo, cumplimos con las entregas.</li>
                     </ul>
                 </div>
-                <div class="nosotros-image">
-                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipo Sweet Bites">
-                </div>
             </div>
         </div>
     </section>
@@ -676,122 +648,3 @@
                             <input type="text" id="nombre" placeholder="Tu nombre" required>
                         </div>
                         <div class="form-group">
-                            <label for="telefono">Teléfono / WhatsApp</label>
-                            <input type="tel" id="telefono" placeholder="Ej: 5816 9879" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="producto">Producto deseado</label>
-                            <select id="producto" required>
-                                <option value="">Selecciona un producto</option>
-                                <option value="Fresas con Crema">Fresas con Crema - Q35.00</option>
-                                <option value="Mini Panqueques">Mini Panqueques - Q30.00</option>
-                                <option value="Waffles">Waffles - Q40.00</option>
-                                <option value="Brochetas de Mini Panqueques">Brochetas de Mini Panqueques - Q45.00</option>
-                                <option value="Brochetas de Waffles">Brochetas de Waffles - Q50.00</option>
-                                <option value="Combo Sweet">Combo Sweet - Q55.00</option>
-                                <option value="Combo Bites">Combo Bites - Q60.00</option>
-                                <option value="Combo Waffle">Combo Waffle - Q65.00</option>
-                                <option value="Combo Especial">Combo Especial - Q95.00</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje adicional (opcional)</label>
-                            <textarea id="mensaje" placeholder="Cuéntanos más sobre tu pedido..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-enviar">
-                            <i class="fab fa-whatsapp"></i> Enviar pedido por WhatsApp
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <img src="logo.png" alt="Sweet Bites" class="footer-logo">
-                    <p>Endulzando tus momentos especiales con postres frescos y artesanales en Quetzaltenango, Guatemala.</p>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Enlaces Rápidos</h4>
-                    <p><a href="#inicio">Inicio</a></p>
-                    <p><a href="#productos">Productos</a></p>
-                    <p><a href="#promociones">Promociones</a></p>
-                    <p><a href="#nosotros">Nosotros</a></p>
-                    <p><a href="#contacto">Contacto</a></p>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/50258169879" target="_blank" rel="noopener">+502 5816 9879</a></p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:55706564">5570 6564</a></p>
-                    <p><i class="fas fa-envelope"></i> pedidos@sweetbites.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Quetzaltenango, GT</p>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Síguenos</h4>
-                    <p>Descubre nuestras novedades y promociones en redes sociales.</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/share/1ErtqsGVip/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://tiktok.com/@sweet_bite021" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/50258169879" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sweet Bites. Todos los derechos reservados. Hecho con <i class="fas fa-heart" style="color: var(--dorado);"></i> en Quetzaltenango.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ===== BOTÓN FLOTANTE WHATSAPP ===== -->
-    <a href="https://wa.me/50258169879?text=Hola%20Sweet%20Bites,%20quiero%20hacer%20un%20pedido"
-       class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- ===== SCRIPT ===== -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-        if (menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-        }
-
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navMenu) navMenu.classList.remove('active');
-            });
-        });
-
-        function pedirProducto(nombre) {
-            const mensaje = `Hola Sweet Bites! Quiero pedir: ${nombre}`;
-            window.open(`https://wa.me/50258169879?text=${encodeURIComponent(mensaje)}`, '_blank');
-        }
-
-        function enviarPedido(event) {
-            event.preventDefault();
-            const nombre = document.getElementById('nombre').value;
-            const telefono = document.getElementById('telefono').value;
-            const producto = document.getElementById('producto').value;
-            const mensaje = document.getElementById('mensaje').value;
-
-            const texto = `*Nuevo Pedido - Sweet Bites*\n\n` +
-                          `👤 *Nombre:* ${nombre}\n` +
-                          `📞 *Teléfono:* ${telefono}\n` +
-                          `🍰 *Producto:* ${producto}\n` +
-                          `📝 *Mensaje:* ${mensaje || 'Sin mensaje adicional'}`;
-
-            window.open(`https://wa.me/50258169879?text=${encodeURIComponent(texto)}`, '_blank');
-        }
-    </script>
-</body>
-</html>
