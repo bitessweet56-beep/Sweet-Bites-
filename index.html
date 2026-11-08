@@ -747,3 +747,11 @@
 
             // Codificar el mensaje y crear la URL
             const mensajeCodificado = encodeURIComponent(mensaje);
+            
+            // ✅ ESTAS LÍNEAS FALTAN EN TU CÓDIGO ✅
+            const url = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
